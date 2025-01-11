@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+:root {
+  --font-family: "Inconsolata", serif;
+  --color-text: #000000;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #CEE4F5;
+  --bg-color-second: #fcfcfc;
+  --hover-color: #039BE5;
+  --shadow-color: #8b8eaf;
+  --line-height: 1.7rem;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: var(--bg-color-second);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: var(--bolder-font);
+}
+
+ul {
+  list-style-type: none;
+  font-weight: var(--bold-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px var(--shadow-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+.hamburger-menu {
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.about-me img {
+  width: 35rem;
+}
+
+.about-me-div {
+  width: 40rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--shadow-color);
+  text-align: justify;
+}
+
+.about-me-div h1 {
+  margin-bottom: 0.5rem;
+}
+
+.about-me-div p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+  background-color: white;
+  margin: 0.5rem;
+}
+
+.skills {
+  padding-top: 32px;
+  max-width: 70rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.skills h2 {
+  margin-bottom: 1rem;
+}
+
+.skills-container {
+  width: 60rem;
+}
+
+.skills-container img {
+  padding: 1rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+
+.icon-card {
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--shadow-color);
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+}
+
+.projects {
+  padding: 32px 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.projects img {
+  width: 65%;
+  height: 60%;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  gap: 1rem;
+}
+
+.project-card {
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--shadow-color);
+  padding: 20px;
+  margin: 15px;
+  background-color: white;
+}
+
+.contact {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.soc-icon {
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--shadow-color);
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+.go-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 12%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media screen and (max-width: 720px) {
+  nav {
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .hamburger-menu img {
+    height: 1.5rem;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .about-me {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .about-me img {
+    width: 20rem;
+  }
+
+  .about-me-div {
+    width: 20.5rem;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .soc-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 10px;
+    margin: 5px;
+  }
+}

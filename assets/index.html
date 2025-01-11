@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristina Beriso | Full Stack Developer</title>
+  <link rel="shortcut icon" href="icons/favicon.ico" type="image/png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav>
+    <h1>CRISTINA BERISO</h1>
+
+    <ul class="navigator">
+      <li><a href="#about-me" class="nav-link">About Me</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <button class="hamburger-menu" id="burger-menu"><img src="icons/burger-icon.svg"></button>
+    <script>
+      const burger = document.querySelector("#burger-menu");
+      const ul = document.querySelector("nav ul");
+      const nav = document.querySelector("nav");
+
+      burger.addEventListener("click", () => {
+        ul.classList.toggle("show");
+      });
+
+      const navLink = document.querySelectorAll(".nav-link");
+
+      navLink.forEach((link) =>
+        link.addEventListener("click", () => {
+          ul.classList.remove("show");
+        })
+      );
+    </script>
+  </nav>
+
+  <section class="about-me" id="about-me">
+    <img src="icons/about me.jpg" alt="about-me">
+
+    <div class="about-me-div">
+      <h2>About Me</h2>
+      <p>A few months ago, I decided to switch sectors, so I completed the Full Stack Developer bootcamp with ISDI
+        Coders and successfully finished it by delivering my final project in December.
+        My plans are to continue learning and working to expand my knowledge and find a company that will give me the
+        opportunity to prove my worth.
+        For the past 7 years, I have worked in various veterinary hospitals as a veterinary nurse. This experience has
+        allowed me to develop qualities such as teamwork, effective communication, and the ability to manage tasks with
+        my colleagues while working under stressful conditions.</p>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+
+      <img src="icons/node-icon.png" alt="NodeJS" loading="lazy" class="icon icon-card">
+      <img src="icons/react-icon.png" alt="React" loading="lazy" class="icon icon-card">
+      <img src="icons/taildwind-icon.png" alt="Taildwind" loading="lazy" class="icon icon-card">
+      <img src="icons/mongodb-icon.png" alt="MongoDB" loading="lazy" class="icon icon-card">
+      <img src="icons/js-icon.png" alt="JavaScript" loading="lazy" class="icon icon-card">
+      <img src="icons/html-icon.png" alt="HTML" loading="lazy" class="icon icon-card">
+      <img src="icons/css-icon.png" alt="CSS" loading="lazy" class="icon icon-card">
+
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="project-container project-card">
+      <img src="icons/makeup-scanner.png" alt="">
+      <h3 class="project-title">Makeup Scanner</h3>
+      <p class="project-details">MakeUp Scanner is a web/app that you can use to search makeup by it name o by its
+        properties. Also you can
+        create your own list of products that you like or wish to buy. And you can find all the stores where you can buy
+        those products.</p>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Network and contact </h2>
+    <div>
+      <a href="https://github.com/CriBeriso" target="_blank"><img src="icons/githup-icon.svg" alt="GitHub"
+          loading="lazy" class="soc-icon"></a>
+      <a href="https://www.linkedin.com/in/cristina%E2%80%8B-beriso-a1867b100/" target="_blank"><img
+          src="icons/linkedin-icon.svg" alt="Linkedin" loading="lazy" class="soc-icon"></a>
+      <a href="mailto:cristinaberiso@icloud.com"><img src="icons/email-icon.svg" alt="Email" loading="lazy"
+          class="soc-icon"></a>
+      <a href="documents/CV Cristina Beriso.pdf" target="_blank"><img src="icons/cv-icon.svg" alt="CV" loading="lazy"
+          class="soc-icon"></a>
+    </div>
+  </section>
+
+  <i class="go-up" id="go-up"><img src="icons/up-icon.gif" alt="Go up" class="up-arrow"></i>
+
+  <script>
+    const goUp = document.querySelector("#go-up");
+
+    goUp.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+  </script>
+
+  <footer>
+    <p class="copy">Built by Cristina Beriso</p>
+  </footer>
+</body>
+
+</html>
