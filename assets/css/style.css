@@ -121,7 +121,7 @@ nav ul {
 }
 
 .skills-container {
-  width: 60rem;
+  width: 80%;
 }
 
 .skills-container img {
@@ -175,6 +175,10 @@ nav ul {
   padding: 20px;
   margin: 15px;
   background-color: white;
+}
+
+.project-link {
+  text-decoration: underline;
 }
 
 .contact {
@@ -275,5 +279,49 @@ footer {
     height: 4.5rem;
     padding: 10px;
     margin: 5px;
+  }
+
+  @media screen and (max-width: 420px) {
+    .about-me img {
+      width: 15rem;
+    }
+
+    .about-me-div {
+      width: 18rem;
+    }
+
+    .icon {
+      width: 5rem;
+      height: 5rem;
+      align-self: center;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+
+    .last-card {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    .project-container {
+      width: 17.875rem;
+    }
+
+    .contact div {
+      width: 75%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 0.5rem;
+      text-align: center;
+    }
+
+    .up-arrow {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
